@@ -6,6 +6,7 @@ async function bootstrap() {
   //Factory.
   const app = await NestFactory.create(AppModule);
 
+  //API CEP
   app.enableCors({
     origin: true,
     methods: 'GET, HEAD, PUT, PATCH, POST, DELETE, OPTIONS',

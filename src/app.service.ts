@@ -7,7 +7,7 @@ import { UpdateHelloDTO } from './dto/updateHello.dto';
 @Injectable()
 export class AppService {
   getHello(): string {
-    return 'Vai Corinthians!!';
+    return 'Executando método via get!!';
   }
 
   // TypeScript - Forte tipagem de dados.

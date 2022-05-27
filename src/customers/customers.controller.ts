@@ -1,4 +1,12 @@
-import { Controller } from '@nestjs/common';
-//http://localhost:3000/customers
+import { Controller, Get } from '@nestjs/common';
+import { Customer } from '@prisma/client';
+import { CustomersService } from './customers.service';
 @Controller('customers')
-export class CustomersController {}
+export class CustomersController {
+  constructor(private readonly customersService: CustomersService) {}
+
+  @Get()
+  async getAllCustomers(): Promise<Customer[]> {
+    return this.customersService.getAllCustomers();
+  }
+}

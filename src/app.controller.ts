@@ -14,6 +14,7 @@ import { UpdateHelloDTO } from './dto/updateHello.dto';
 // localhost:3000
 @Controller()
 export class AppController {
+  //dependency injection
   constructor(private readonly appService: AppService) {}
 
   @Get()
