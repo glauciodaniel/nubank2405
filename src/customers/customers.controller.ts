@@ -13,6 +13,6 @@ export class CustomersController {
 
   @Post()
   async createCustomer(@Body() data: CreateCustomerDTO): Promise<Customer> {
-    return this.customersService.createCustomer();
+    return this.customersService.createCustomer(data);
   }
 }

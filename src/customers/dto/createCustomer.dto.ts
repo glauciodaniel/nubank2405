@@ -1,4 +1,4 @@
-import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
+import { IsEmail, IsMobilePhone, IsNotEmpty, IsString } from 'class-validator';
 
 export class CreateCustomerDTO {
   @IsString()
@@ -13,5 +13,9 @@ export class CreateCustomerDTO {
   @IsNotEmpty()
   password: string;
   cpf: string;
+
+  @IsMobilePhone('pt-BR')
   mobile: string;
+  //   @IsPostalCode('BR')
+  //  zipCode: string;
 }
